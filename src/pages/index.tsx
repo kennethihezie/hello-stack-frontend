@@ -53,6 +53,7 @@ export default class HelloStacks extends Component<IProps, IState>{
     icon: "https://freesvg.org/img/1541103084.png"
   }
 
+  //We are checking if the user have already authenticated before.  
   componentDidMount(): void {
     if(this.userSession.isSignInPending()){
       this.userSession.handlePendingSignIn().then((userData) => {
